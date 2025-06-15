@@ -1,0 +1,59 @@
+.about-wrapper {
+  display: flex;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* Left column - fixed photo */
+.about-photo {
+  flex: 0 0 40%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.about-photo img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Right column - scrollable content */
+.about-content {
+  flex: 1;
+  padding: 4rem 3rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.tagline {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.desc {
+  font-size: 1rem;
+  color: #cccccc;
+  line-height: 1.6;
+}
+
+.sketch {
+  max-width: 80%;
+  border-radius: 8px;
+}
