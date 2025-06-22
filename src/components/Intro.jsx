@@ -5,6 +5,8 @@ const Intro = ({ onFinish }) => {
   const fullText = 'Hello_World !';
   const speed = 150;
   const [displayedChars, setDisplayedChars] = useState([]);
+  const [showHint, setShowHint] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
 
   useEffect(() => {
     let index = 0;
@@ -15,9 +17,13 @@ const Intro = ({ onFinish }) => {
         index++;
       } else {
         clearInterval(interval);
+        setShowHint(true);
 
         const proceed = () => {
-          onFinish();
+          setFadeOut(true);
+          setTimeout(() => {
+            onFinish();
+          }, 800); // allow fade out before switching
           window.removeEventListener('click', proceed);
           window.removeEventListener('keydown', proceed);
         };
@@ -31,8 +37,14 @@ const Intro = ({ onFinish }) => {
   }, [onFinish]);
 
   return (
-    <div className="intro-screen">
-      <h1 className="type">{displayedChars.join('')}<span className="blinking">|</span></h1>
+    <div className={`intro-screen ${fadeOut ? 'fade-out' : ''}`}>
+      <div>
+        <h1 className="type">
+          {displayedChars.join('')}
+          <span className="blinking">|</span>
+        </h1>
+        {showHint && <p className="hint-fade">Click anywhere or press any key</p>}
+      </div>
     </div>
   );
 };

@@ -1,25 +1,40 @@
-import React from 'react';
-import './About.css';
+import React from "react";
+import skills from "../data/Skills";
 
 const About = () => {
   return (
-    <div className="about-wrapper">
-      {/* Fixed Left Image */}
-      <div className="about-photo">
-        <img src="/profilepic.jpg" alt="Gurpreet" />
-      </div>
+    <section id="about" className="bg-black text-white px-8 py-32">
+      <h2 className="text-3xl font-bold text-center mb-12">About Me</h2>
 
-      {/* Scrollable Right Content */}
-      <div className="about-content">
-        <h1 className="name">I'm Gurpreet</h1>
-        <p className="tagline">A software developer transitioning to data science.</p>
-        <p className="desc">
-          I identify as a developer and analyst who loves to design software and
-          make sense of data, currently exploring the possibilities of Artificial Intelligence (AI) and Machine Learning (ML) in the world of data.
-        </p>
-        <img src="https://via.placeholder.com/250x150" alt="sketch 1" className="sketch" />
+      <div className="grid md:grid-cols-2 gap-12">
+        {/* Background Box */}
+        <div className="bg-gray-900 p-6 rounded-lg shadow">
+          <h3 className="text-xl font-semibold mb-4">My Background</h3>
+          <p className="text-gray-300">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          </p>
+        </div>
+
+        {/* Skills Bar */}
+        <div>
+          <h3 className="text-xl font-semibold mb-4">My Skills</h3>
+          {skills.map((skill, index) => (
+            <div key={index} className="mb-4">
+              <div className="flex justify-between mb-1">
+                <span>{skill.name}</span>
+                <span>{skill.level}%</span>
+              </div>
+              <div className="w-full bg-gray-700 rounded-full h-3">
+                <div
+                  className="bg-pink-600 h-3 rounded-full"
+                  style={{ width: `${skill.level}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
