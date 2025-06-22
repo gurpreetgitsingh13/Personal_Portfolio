@@ -27,7 +27,7 @@ const Hero = () => {
         <p>Or do you have a crazy idea or a project and wanna get started right this second ?</p>
         <a
           href="#contact"
-          className="bg-red-600 hover:bg-pink-700 text-white font-medium py-2 px-6 rounded inline-block w-max"
+          className="bg-red-600 hover:bg-black text-white font-medium py-2 px-6 rounded inline-block w-max"
         >
           Get in Touch
         </a>
