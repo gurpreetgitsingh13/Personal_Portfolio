@@ -1,18 +1,18 @@
 const projects = [
   {
-    title: "Project One",
-    description: "A responsive website for a local business with modern design and smooth animations.",
-    stack: ["HTML", "CSS", "JavaScript"],
+    title: "Talking Hands",
+    description: "Sign-Language‑Detection — Talking‑Hands, centers on a real‑time detection model to recognize and translate sign language gestures—particularly American Sign Language (ASL).",
+    stack: ["Python", "HTML", "CSS", "JavaScript", "SQL"],
   },
   {
-    title: "Project Two",
-    description: "A mobile app for tracking daily habits and setting personal goals.",
-    stack: ["React Native", "Firebase"],
+    title: "Chat CV",
+    description: "A chatbot which connects humans to the interact and build their resume through a chatbot !",
+    stack: ["Python", "JavaScript", "HTML", "CSS"],
   },
   {
-    title: "Project Three",
-    description: "A dashboard for visualizing and analyzing business metrics and KPIs.",
-    stack: ["React", "Node.js", "D3.js"],
+    title: "Grade-R",
+    description: "A web-app in R created using shinyjs and other libraries to figure out grades in a visually represented description.",
+    stack: ["R", "SQL"],
   },
 ];
 

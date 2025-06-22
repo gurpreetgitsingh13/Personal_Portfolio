@@ -22,8 +22,9 @@ const Hero = () => {
          I have had the chance to work with numerous different technologies and interact/explore various different tech stacks.
         </p>
         <p>
-          Do I have what it takes to understand technology to a deeper level ?
+          Do you have what it takes to understand technology to a deeper level ?
         </p>
+        <p>Or do you have a crazy idea or a project and wanna get started right this second ?</p>
         <a
           href="#contact"
           className="bg-red-600 hover:bg-pink-700 text-white font-medium py-2 px-6 rounded inline-block w-max"
@@ -37,7 +38,7 @@ const Hero = () => {
         <img
           src="/profilepic.jpg"
           alt="Gurpreet's Profile"
-          className="w-80 h-100  border-8  shadow-lg"
+          className="w-80 h-100  border-8 border-red-500 shadow-lg"
         />
       </div>
     </section>

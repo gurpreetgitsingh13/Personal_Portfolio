@@ -28,7 +28,7 @@ const ContactForm = () => {
         ></textarea>
         <button
           type="submit"
-          className="md:col-span-2 bg-pink-600 hover:bg-pink-700 py-3 rounded text-white font-semibold"
+          className="md:col-span-2 bg-red-600 hover:bg-pink-700 py-3 rounded text-white font-semibold"
         >
           Send Message
         </button>
